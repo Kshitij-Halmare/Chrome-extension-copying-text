@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Extractor Options</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f4f8;
+            color: #444;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        select, input[type="checkbox"], button {
+            margin-top: 8px;
+            margin-bottom: 20px;
+            display: block;
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #357ab7;
+        }
+        .checkbox-container {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-container input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        .option-section {
+            margin-bottom: 30px;
+        }
+        .option-section:last-child {
+            margin-bottom: 0;
+        }
+        @media (max-width: 600px) {
+            select, input[type="checkbox"], button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Extension Options</h2>
+
+    <div style="max-width: 500px; margin: auto; padding: 2pc;">
+        <div class="option-section">
+            <label for="language">OCR Language:</label>
+            <select id="language">
+                <option value="eng">English</option>
+                <option value="spa">Spanish</option>
+                <option value="fra">French</option>
+            </select>
+        </div>
+    
+        <div class="option-section">
+            <label for="frameRate">Video Frame Rate (seconds):</label>
+            <select id="frameRate">
+                <option value="1">Every 1 second</option>
+                <option value="2">Every 2 seconds</option>
+                <option value="5">Every 5 seconds</option>
+            </select>
+        </div>
+    
+        <div class="option-section">
+            <label for="formatting">Text Formatting:</label>
+            <select id="formatting">
+                <option value="original">Original Formatting</option>
+                <option value="uppercase">Uppercase</option>
+                <option value="lowercase">Lowercase</option>
+            </select>
+        </div>
+
+        <button id="saveOptions">Save Options</button>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>
